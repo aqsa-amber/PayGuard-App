@@ -1,0 +1,3 @@
+Salaries are usually structured monthly or annually. 
+Monthly salary × 12 = Annual salary. 
+Deductions include taxes, insurance, and retirement contributions.
