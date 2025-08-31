@@ -18,3 +18,4 @@ def load_texts():
 
     return texts, metadatas
 
+
