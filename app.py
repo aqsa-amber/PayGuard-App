@@ -1,12 +1,11 @@
 import streamlit as st
-
 from data_loader import load_texts
 from vector_store import create_vector_store
 from agents import create_agent
 from coordinator import route_query
 
 # --------------------------
-# API Key (Streamlit Secrets)
+# API Key from Streamlit Secrets
 # --------------------------
 try:
     api_key = st.secrets["OPENAI_API_KEY"]
@@ -17,7 +16,7 @@ except KeyError:
 # --------------------------
 # Streamlit Page Setup
 # --------------------------
-st.set_page_config(page_title="Multi-Agent RAG System", layout="wide")
+st.set_page_config(page_title="Multi-Agent RAG", layout="wide")
 st.title("💡 Multi-Agent RAG System (Salary + Insurance)")
 
 # --------------------------
@@ -35,7 +34,7 @@ insurance_agent = create_agent(vector_store, "insurance")
 # --------------------------
 # Streamlit UI
 # --------------------------
-user_query = st.text_input("Ask your question about salary or insurance:")
+user_query = st.text_input("Ask a question about salary or insurance:")
 
 if user_query:
     with st.spinner("Thinking..."):
